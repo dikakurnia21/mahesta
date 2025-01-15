@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section id="content">
+            <h1>Welcome to Mahesta</h1>
+            <p>Your content goes here.</p>
+        </section>
+    </main>
+    
+    <script>
+        fetch('header.html')
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById('header-container').innerHTML = data;
+    
+                // Dapatkan tinggi header setelah dimuat
+                const headerHeight = document.getElementById('header').offsetHeight;
+    
+                // Tambahkan padding-top ke konten
+                document.body.style.paddingTop = headerHeight + 'px';
+            })
+            .catch((error) => console.error('Error loading header:', error));
+    </script>
+    
+
+
+    <section class="service" id="service">
+    </br>
+    </br>
+        <h1 class="heading"> Contact <span>Us</span> </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <i class="fab fa-whatsapp"></i>
+                <h3>Whatsapp</h3>
+                <p>Hubungi kami melalui whatsapp</p>
+            </div>
+    
+            <div class="box">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>Kunjungi Instagram kami</p>
+            </div>
+    
+            <div class="box">
+                <i class="fab fa-youtube"></i>
+                <h3>Youtube</h3>
+                <p>Kunjungi Channel Youtube kami</p>
+            </div>
+    
+            <div class="box">
+                <i class="fab fa-utensils"></i>
+                <h3>food and drinks</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-photo-video"></i>
+                <h3>photos and videos</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-birthday-cake"></i>
+                <h3>custom food</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+            </div>
+    
+        </div>
+    
+    </section>
+    <!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+
+    <form action="">
+        <div class="inputBox">
+            <input type="text" placeholder="name">
+            <input type="email" placeholder="email">
+        </div>
+        <div class="inputBox">
+            <input type="number" placeholder="number">
+            <input type="text" placeholder="subject">
+        </div>
+        <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="send message" class="btn">
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts -->
+<div id="footer-container">
+    <script>
+        fetch('footer.html')
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch((error) => console.error('Error loading footer:', error));
+    </script>
+    </div>
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+</body>
+</html>

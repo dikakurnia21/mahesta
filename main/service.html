@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<div id="header-container"></div>
+
+<main>
+    <section id="content">
+        <h1>Welcome to Mahesta</h1>
+        <p>Your content goes here.</p>
+    </section>
+</main>
+
+<script>
+    fetch('header.html')
+        .then((response) => response.text())
+        .then((data) => {
+            document.getElementById('header-container').innerHTML = data;
+
+            // Dapatkan tinggi header setelah dimuat
+            const headerHeight = document.getElementById('header').offsetHeight;
+
+            // Tambahkan padding-top ke konten
+            document.body.style.paddingTop = headerHeight + 'px';
+        })
+        .catch((error) => console.error('Error loading header:', error));
+</script>
+
+
+
+<!-- header section ends -->
+
+<!-- service section starts  -->
+
+<section class="service" id="service">
+
+    <h1 class="heading"> our <span>services</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>venue selection</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-envelope"></i>
+            <h3>invitation card</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-music"></i>
+            <h3>entertainment</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-photo-video"></i>
+            <h3>photos and videos</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-birthday-cake"></i>
+            <h3>custom food</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- service section ends -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<!-- footer section starts -->
+<div id="footer-container">
+    <script>
+        fetch('footer.html')
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch((error) => console.error('Error loading footer:', error));
+    </script>
+    </div>
+    <!-- footer section ends -->
+
+    
+</body>
+</html>

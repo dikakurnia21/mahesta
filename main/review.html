@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<div id="header-container"></div>
+
+<main>
+    <section id="content">
+        <h1>Welcome to Mahesta</h1>
+        <p>Your content goes here.</p>
+    </section>
+</main>
+
+<script>
+    fetch('header.html')
+        .then((response) => response.text())
+        .then((data) => {
+            document.getElementById('header-container').innerHTML = data;
+
+            // Dapatkan tinggi header setelah dimuat
+            const headerHeight = document.getElementById('header').offsetHeight;
+
+            // Tambahkan padding-top ke konten
+            document.body.style.paddingTop = headerHeight + 'px';
+        })
+        .catch((error) => console.error('Error loading header:', error));
+</script>
+
+
+
+<!-- header section ends -->
+
+    <!-- review section starts  -->
+
+<section class="reivew" id="review"> 
+</br>
+</br>
+    <h1 class="heading">client's <span>review</span></h1>
+
+    <div class="review-slider1 swiper-container">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="../images/pic-1.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <span>happy clients</span>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
+            </div>
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="../images/pic-2.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <span>happy clients</span>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
+            </div>
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="../images/pic-3.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <span>happy clients</span>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
+            </div>
+
+            <div class="swiper-slide box">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="../images/pic-4.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <span>happy clients</span>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="../js/script.js"></script>
+
+<!-- footer section starts -->
+<div id="footer-container">
+    <script>
+        fetch('footer.html')
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch((error) => console.error('Error loading footer:', error));
+    </script>
+    </div>
+    <!-- footer section ends -->
+
+    
+</body>
+</html>

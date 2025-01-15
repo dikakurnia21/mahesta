@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<div id="header-container"></div>
+
+<main>
+    <section id="content">
+        <h1>Welcome to Mahesta</h1>
+        <p>Your content goes here.</p>
+    </section>
+</main>
+
+<script>
+    fetch('header.html')
+        .then((response) => response.text())
+        .then((data) => {
+            document.getElementById('header-container').innerHTML = data;
+
+            // Dapatkan tinggi header setelah dimuat
+            const headerHeight = document.getElementById('header').offsetHeight;
+
+            // Tambahkan padding-top ke konten
+            document.body.style.paddingTop = headerHeight + 'px';
+        })
+        .catch((error) => console.error('Error loading header:', error));
+</script>
+
+
+
+<!-- header section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+    </br>
+    </br>
+    <h1 class="heading">our <span>gallery</span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../images/g-1.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/g-2.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/g-3.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/g-4.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/g-5.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/g-6.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/g-7.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/g-8.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/g-9.jpg" alt="">
+            <h3 class="title">photos and events</h3>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- footer section starts -->
+<div id="footer-container">
+    <script>
+        fetch('footer.html')
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch((error) => console.error('Error loading footer:', error));
+    </script>
+    </div>
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+</body>
+</html>

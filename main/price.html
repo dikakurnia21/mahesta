@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!-- header section starts  -->
+
+<div id="header-container"></div>
+
+<main>
+    <section id="content">
+        <h1>Welcome to Mahesta</h1>
+        <p>Your content goes here.</p>
+    </section>
+</main>
+
+<script>
+    fetch('header.html')
+        .then((response) => response.text())
+        .then((data) => {
+            document.getElementById('header-container').innerHTML = data;
+
+            // Dapatkan tinggi header setelah dimuat
+            const headerHeight = document.getElementById('header').offsetHeight;
+
+            // Tambahkan padding-top ke konten
+            document.body.style.paddingTop = headerHeight + 'px';
+        })
+        .catch((error) => console.error('Error loading header:', error));
+</script>
+
+
+
+<!-- header section ends -->
+
+  <!-- price section starts  -->
+
+<section class="price" id="price">
+</br>
+</br>
+    <h1 class="heading"> our <span>price</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3 class="title">Hiburan Dangdut</h3>
+            <h3 class="amount">Rp 3,5 Jt</h3>
+            <ul>
+                <li><i class="fas fa-check"></i>Sound System</li>
+                <li> <i class="fas fa-check"></i> Keyboard </li>
+                <li> <i class="fas fa-check"></i> Gendang/Rampak </li>
+                <li> <i class="fas fa-check"></i> Master Ceremony </li>
+                <li> <i class="fas fa-check"></i> Singer 2 </li>
+                <li> <i class=""></i>  </li>
+                <li> <i class=""></i> </li>
+            </ul>
+            <a href="#" class="btn">Booking Now</a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">Hiburan Campursari Woyo</h3>
+            <h3 class="amount">Rp 4 Jt</h3>
+            <ul>
+                <li><i class="fas fa-check"></i>Sound System</li>
+                <li> <i class="fas fa-check"></i> Keyboard </li>
+                <li> <i class="fas fa-check"></i> Gendang/Rampak </li>
+                <li> <i class="fas fa-check"></i> Master Ceremony </li>
+                <li> <i class="fas fa-check"></i> Singer Dangdut </li>
+                <li> <i class="fas fa-check"></i> Singer Campursari Woyo </li>
+                <li> <i class=""></i>  </li>
+
+            </ul>
+            <a href="#" class="btn">Booking Now</a>
+        </div>
+
+        <div class="box">
+            <h3 class="title">Hiburan Dangdut Semi Dalam Tenda</h3>
+            <h3 class="amount">Rp 5 Jt</h3>
+            <ul>
+                <li><i class="fas fa-check"></i>Sound System</li>
+                <li> <i class="fas fa-check"></i> Keyboard </li>
+                <li> <i class="fas fa-check"></i> Melody </li>
+                <li> <i class="fas fa-check"></i> Gendang/Rampak </li>
+                <li> <i class="fas fa-check"></i> Suling </li>
+                <li> <i class="fas fa-check"></i> Master Ceremony </li>
+                <li> <i class="fas fa-check"></i> Singer 3 </li>
+            </ul>
+            <a href="#" class="btn">Booking Now</a>
+        </div>
+
+        <div class="btn">
+            <h3 class="title">Lihat Semua</h3>
+            
+        </div>
+
+    </div>
+
+
+</section>  
+<!-- footer section starts -->
+<div id="footer-container">
+    <script>
+        fetch('footer.html')
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch((error) => console.error('Error loading footer:', error));
+    </script>
+    </div>
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+</body>
+</html>
