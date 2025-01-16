@@ -5,6 +5,8 @@
 }
 
 *{
+    
+    box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
@@ -72,6 +74,9 @@ section{
 }
 
 .header{
+    width: 100%;
+    max-width: 100vw; /* Mencegah elemen melebihi lebar layar */
+    overflow: hidden; /* Sembunyikan elemen yang keluar */
     position: fixed;
     height: 100px;
     top:0; left: 0; right: 0;
@@ -84,10 +89,14 @@ section{
 }
 
 .header .logo {
+    
+    max-width: 100%;
+    height: auto;
+    display: block; /* Mencegah scroll horizontal */
     font-weight: bolder;
     color: #fff;
     font-size: 2.5rem;
-    display: flex;
+    
     align-items: center;
     justify-content: center;
 }
