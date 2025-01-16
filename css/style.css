@@ -548,7 +548,14 @@ section{
 
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
+    .header .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #241df8;
 
     #menu-bars{
         display: initial;
