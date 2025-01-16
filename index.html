@@ -29,22 +29,26 @@
 </main>
 
 <script>
-    fetch('main/header.html')
-    .then((response) => response.text())
-    .then((data) => {
-        const headerContainer = document.getElementById('header-container');
-        if (headerContainer) {
-            headerContainer.innerHTML = data;
-            const header = document.getElementById('header');
-            if (header) {
-                const headerHeight = header.offsetHeight;
-                document.body.style.paddingTop = headerHeight + 'px';
-            }
-        }
-    })
-    .catch((error) => console.error('Error loading header:', error));
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('main/header.html')
+            .then((response) => response.text())
+            .then((data) => {
+                const headerContainer = document.getElementById('header-container');
+                if (headerContainer) {
+                    headerContainer.innerHTML = data;
 
+                    // Pastikan header sudah di-load sebelum mengambil height
+                    const header = document.getElementById('header');
+                    if (header) {
+                        const headerHeight = header.offsetHeight;
+                        document.body.style.paddingTop = headerHeight + 'px';
+                    }
+                }
+            })
+            .catch((error) => console.error('Error loading header:', error));
+    });
 </script>
+
 
 
 
